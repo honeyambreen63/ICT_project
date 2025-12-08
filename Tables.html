@@ -3,71 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Price List</title>
+  <title>Caramel Cloud Coffee - Price List</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #FFF8F0;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #FFF8F0, #FDF1E5);
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+
+    header {
+      background-color: #D9A86C;
+      padding: 40px 20px;
       text-align: center;
       color: #4A2E1F;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    table {
-      width: 70%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background-color: #FFFFFF;
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      letter-spacing: 2px;
     }
-    th {
-      background-color: #D9A86C; /* caramel gold */
-      color: #4A2E1F; /* dark coffee brown */
-      padding: 10px;
-      border: 1px solid #4A2E1F;
-    }
-    td {
-      color: #4A2E1F; /* dark coffee brown */
-      padding: 10px;
-      border: 1px solid #4A2E1F;
+
+    nav {
+      margin: 20px;
       text-align: center;
+    }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #4A2E1F;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #4A2E1F;
+      color: #D9A86C;
+    }
+
+    .section-header {
+      text-align: center;
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      color: #4A2E1F;
+      font-weight: bold;
+      border-bottom: 3px solid #D9A86C;
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+
+    .table-container {
+      width: 90%;
+      margin: 30px auto;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #FFFFFF;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th {
+      background-color: #D9A86C;
+      color: #4A2E1F;
+      padding: 12px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    td {
+      color: #4A2E1F;
+      padding: 12px;
+      text-align: center;
+      font-size: 1em;
+      border-bottom: 1px solid #D9A86C;
+    }
+
+    tr:hover {
+      background-color: #FFF4E1;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        padding: 10px 5px;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Coffee Price List</h1>
+  <header>
+    <h1>Caramel Cloud Coffee</h1>
+  </header>
 
-  <table>
-    <tr>
-      <th>Item</th>
-      <th>Small</th>
-      <th>Medium</th>
-      <th>Large</th>
-    </tr>
-    <tr>
-      <td>Espresso</td>
-      <td>PKR 250</td>
-      <td>PKR 300</td>
-      <td>PKR 350</td>
-    </tr>
-    <tr>
-      <td>Cappuccino</td>
-      <td>PKR 300</td>
-      <td>PKR 350</td>
-      <td>PKR 400</td>
-    </tr>
-    <tr>
-      <td>Latte</td>
-      <td>PKR 350</td>
-      <td>PKR 400</td>
-      <td>PKR 450</td>
-    </tr>
-    <tr>
-      <td>Mocha</td>
-      <td>PKR 350</td>
-      <td>PKR 400</td>
-      <td>PKR 450</td>
-    </tr>
-  </table>
+  <nav>
+    <a href="menu.html">Menu</a>
+    <a href="table.html">Price List</a>
+    <a href="form.html">Order Form</a>
+  </nav>
+
+  <!-- Coffee Classics -->
+  <div class="section-header">Coffee Classics</div>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Small</th>
+        <th>Medium</th>
+        <th>Large</th>
+      </tr>
+      <tr><td>Espresso</td><td>PKR 250</td><td>PKR 300</td><td>PKR 350</td></tr>
+      <tr><td>Cappuccino</td><td>PKR 300</td><td>PKR 350</td><td>PKR 400</td></tr>
+      <tr><td>Latte</td><td>PKR 350</td><td>PKR 400</td><td>PKR 450</td></tr>
+      <tr><td>Mocha</td><td>PKR 350</td><td>PKR 400</td><td>PKR 450</td></tr>
+      <tr><td>Macchiato</td><td>PKR 300</td><td>PKR 350</td><td>PKR 400</td></tr>
+      <tr><td>Americano</td><td>PKR 250</td><td>PKR 300</td><td>PKR 350</td></tr>
+    </table>
+  </div>
+
+  <!-- Specialty Coffees -->
+  <div class="section-header">Specialty Coffees</div>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Small</th>
+        <th>Medium</th>
+        <th>Large</th>
+      </tr>
+      <tr><td>Caramel Cloud Latte</td><td>PKR 350</td><td>PKR 400</td><td>PKR 450</td></tr>
+      <tr><td>Vanilla Bean Latte</td><td>PKR 350</td><td>PKR 400</td><td>PKR 450</td></tr>
+      <tr><td>Hazelnut Mocha</td><td>PKR 400</td><td>PKR 450</td><td>PKR 500</td></tr>
+      <tr><td>Irish Coffee</td><td>PKR 400</td><td>PKR 450</td><td>PKR 500</td></tr>
+    </table>
+  </div>
+
+  <!-- Snacks & Desserts -->
+  <div class="section-header">Snacks & Desserts</div>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+      <tr><td>Croissant</td><td>PKR 150</td></tr>
+      <tr><td>Muffin</td><td>PKR 180</td></tr>
+      <tr><td>Bagel</td><td>PKR 160</td></tr>
+      <tr><td>Chocolate Chip Cookie</td><td>PKR 120</td></tr>
+      <tr><td>Cheesecake</td><td>PKR 350</td></tr>
+      <tr><td>Chocolate Brownie</td><td>PKR 200</td></tr>
+      <tr><td>Tiramisu</td><td>PKR 400</td></tr>
+    </table>
+  </div>
+
+  <!-- Beverages -->
+  <div class="section-header">Beverages</div>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+      <tr><td>Hot Chocolate</td><td>PKR 250</td></tr>
+      <tr><td>Herbal Tea</td><td>PKR 200</td></tr>
+      <tr><td>Iced Coffee</td><td>PKR 300</td></tr>
+      <tr><td>Fruit Smoothie</td><td>PKR 350</td></tr>
+    </table>
+  </div>
+
 </body>
 </html>
