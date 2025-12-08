@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFF8F0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #D9A86C; 
+      padding: 20px;
+      text-align: center;
+      color: #4A2E1F; 
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      margin: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4A2E1F;
+      font-weight: bold;
+    }
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .menu-item {
+      background-color: #FFFFFF;
+      border: 1px solid #D9A86C;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .menu-item h3 {
+      color: #4A2E1F;
+      margin-bottom: 10px;
+    }
+    .menu-item p {
+      color: #4A2E1F;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Coffee Menu</h1>
+  </header>
+
+  <nav>
+    <a href="menu.html">Menu</a>
+    <a href="table.html">Price List</a>
+    <a href="form.html">Order Form</a>
+  </nav>
+
+  <div class="menu-container">
+    <div class="menu-item">
+      <h3>Espresso</h3>
+      <p>Small: PKR 250</p>
+      <p>Medium: PKR 300</p>
+      <p>Large: PKR 350</p>
+    </div>
+    <div class="menu-item">
+      <h3>Cappuccino</h3>
+      <p>Small: PKR 300</p>
+      <p>Medium: PKR 350</p>
+      <p>Large: PKR 400</p>
+    </div>
+    <div class="menu-item">
+      <h3>Latte</h3>
+      <p>Small: PKR 350</p>
+      <p>Medium: PKR 400</p>
+      <p>Large: PKR 450</p>
+    </div>
+  </div>
+</body>
+</html>
