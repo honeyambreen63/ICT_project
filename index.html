@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caramel Cloud Coffee</title>
-    <link rel="stylesheet" href="css/style.css">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caramel Cloud Coffee</title>
 
     <!-- Internal CSS -->
     <style>
@@ -16,13 +11,13 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F7F2ED; /* Page background */
-            color: #4A2E1F; /* Default text color */
+            background-color: #F7F2ED;
+            color: #4A2E1F;
         }
 
         /* Navigation Bar */
         header {
-            background-color: #C9A28F; /* Latte brown */
+            background-color: #C9A28F;
             padding: 20px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -58,30 +53,38 @@
         }
 
         nav ul li a:hover {
-            color: #D9A86C; /* Button color on hover */
+            color: #D9A86C;
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 120px 20px;
-            background-color: #F7F2ED; /* Hero background same as page */
+            padding: 60px 20px;
+            background-color: #F7F2ED;
+        }
+
+        .hero img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 25px;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         .hero h2 {
             font-size: 3rem;
-            color: #4A2E1F; /* Hero heading */
+            color: #4A2E1F;
             margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #C28C50; /* Tagline color */
+            color: #C28C50;
             margin-bottom: 30px;
         }
 
         .hero .btn {
-            background-color: #D9A86C; /* Button */
+            background-color: #D9A86C;
             color: #fff;
             padding: 12px 30px;
             text-decoration: none;
@@ -91,12 +94,12 @@
         }
 
         .hero .btn:hover {
-            background-color: #C28C50; /* Slightly darker on hover */
+            background-color: #C28C50;
         }
 
         /* Intro Section */
         .intro {
-            max-width: 800px;
+            max-width: 900px;
             margin: 60px auto;
             text-align: center;
             padding: 0 20px;
@@ -104,27 +107,43 @@
 
         .intro h2 {
             font-size: 2.2rem;
-            color: #4A2E1F;
             margin-bottom: 20px;
         }
 
         .intro p {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #4A2E1F;
+        }
+
+        .intro .gallery {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .intro .gallery img {
+            width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .intro .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #C9A28F; /* Same as nav */
+            background-color: #C9A28F;
             color: #4A2E1F;
             margin-top: 60px;
         }
     </style>
-
-
 </head>
 
 <body>
@@ -148,9 +167,12 @@
         <h2>Where Every Sip Feels Like A Cloud</h2>
         <p>Experience handcrafted brews, warm ambiance, and pure comfort.</p>
         <a href="pages/menu.html" class="btn">Explore Menu</a>
+
+        <!-- Hero Image -->
+        <img src="coffee.jpeg" alt="Coffee Image">
     </section>
 
-    <!-- About Section -->
+    <!-- Intro Section -->
     <section class="intro">
         <h2>Welcome to Caramel Cloud Coffee</h2>
         <p>
@@ -158,6 +180,13 @@
             From creamy caramel blends to rich espresso, we create drinks that bring comfort,
             warmth, and joy. Visit us to enjoy the perfect blend of taste and atmosphere.
         </p>
+
+        <!-- Gallery Images -->
+        <div class="gallery">
+            <img src="cocunutMocha.jpeg" alt="Coconut Mocha Coffee">
+            <img src="animated.jpeg" alt="Animated Coffee Art">
+            <img src="yumm.jpeg" alt="Yummy Coffee">
+        </div>
     </section>
 
     <!-- Footer -->
