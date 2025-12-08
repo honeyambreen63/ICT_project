@@ -15,16 +15,21 @@
       color: #4A2E1F;
     }
     form {
-      background-color: #EFE5DA; /* fields background */
+      background-color: #EFE5DA; 
       width: 50%;
       margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    form:hover {
+      transform: scale(1.02);
     }
     label {
       display: block;
-      margin-top: 10px;
-      color: #4A2E1F; /* labels color */
+      margin-top: 15px;
+      color: #4A2E1F; 
       font-weight: bold;
     }
     input[type="text"],
@@ -32,26 +37,34 @@
     select,
     textarea {
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       margin-top: 5px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 1em;
     }
     input[type="radio"] {
       margin-right: 5px;
     }
+    .radio-group {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
     input[type="submit"] {
-      background-color: #D9A86C; /* submit button color */
+      background-color: #D9A86C; 
       color: white;
       border: none;
-      padding: 10px 20px;
-      margin-top: 15px;
+      padding: 12px 25px;
+      margin-top: 20px;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
+      font-size: 1em;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     input[type="submit"]:hover {
       background-color: #c89f5a;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -73,12 +86,14 @@
     </select>
 
     <label>Size:</label>
-    <input type="radio" id="small" name="size" value="small" checked>
-    <label for="small" style="display:inline;color:#4A2E1F;">Small</label>
-    <input type="radio" id="medium" name="size" value="medium">
-    <label for="medium" style="display:inline;color:#4A2E1F;">Medium</label>
-    <input type="radio" id="large" name="size" value="large">
-    <label for="large" style="display:inline;color:#4A2E1F;">Large</label>
+    <div class="radio-group">
+      <input type="radio" id="small" name="size" value="small" checked>
+      <label for="small" style="display:inline;color:#4A2E1F;">Small</label>
+      <input type="radio" id="medium" name="size" value="medium">
+      <label for="medium" style="display:inline;color:#4A2E1F;">Medium</label>
+      <input type="radio" id="large" name="size" value="large">
+      <label for="large" style="display:inline;color:#4A2E1F;">Large</label>
+    </div>
 
     <input type="submit" value="Submit Order">
   </form>
