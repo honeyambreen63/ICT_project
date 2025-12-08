@@ -3,99 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Form</title>
+  <title>Caramel Cloud Coffee - Order Form</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #FFF8F0;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #FFF8F0, #FDF1E5);
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+
+    header {
+      background-color: #D9A86C;
+      padding: 40px 20px;
       text-align: center;
       color: #4A2E1F;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    form {
-      background-color: #EFE5DA; 
-      width: 50%;
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      letter-spacing: 2px;
     }
-    form:hover {
-      transform: scale(1.02);
+
+    nav {
+      margin: 20px;
+      text-align: center;
     }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #4A2E1F;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #4A2E1F;
+      color: #D9A86C;
+    }
+
+    .form-container {
+      width: 90%;
+      max-width: 500px;
+      margin: 40px auto;
+      background: #FFFFFF;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #4A2E1F;
+      margin-bottom: 25px;
+    }
+
     label {
       display: block;
-      margin-top: 15px;
-      color: #4A2E1F; 
+      margin-bottom: 6px;
+      color: #4A2E1F;
       font-weight: bold;
     }
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea {
+
+    input[type="text"], input[type="email"], select {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #D9A86C;
+      border-radius: 8px;
+      background-color: #EFE5DA;
       font-size: 1em;
     }
-    input[type="radio"] {
-      margin-right: 5px;
-    }
+
     .radio-group {
-      margin-top: 5px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-    input[type="submit"] {
-      background-color: #D9A86C; 
-      color: white;
+
+    .radio-group input {
+      margin-right: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #D9A86C;
+      color: #4A2E1F;
+      font-size: 1.1em;
       border: none;
-      padding: 12px 25px;
-      margin-top: 20px;
+      border-radius: 10px;
       cursor: pointer;
-      border-radius: 6px;
+      transition: background 0.3s ease;
       font-weight: bold;
-      font-size: 1em;
-      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    input[type="submit"]:hover {
-      background-color: #c89f5a;
-      transform: scale(1.05);
+
+    button:hover {
+      background-color: #c8a85f;
     }
   </style>
 </head>
 <body>
-  <h1>Order Form</h1>
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <header>
+    <h1>Caramel Cloud Coffee</h1>
+  </header>
 
-    <label for="drink">Choose your drink:</label>
-    <select id="drink" name="drink">
-      <option value="espresso">Espresso</option>
-      <option value="cappuccino">Cappuccino</option>
-      <option value="latte">Latte</option>
-      <option value="mocha">Mocha</option>
-    </select>
+  <nav>
+    <a href="menu.html">Menu</a>
+    <a href="table.html">Price List</a>
+    <a href="form.html">Order Form</a>
+  </nav>
 
-    <label>Size:</label>
-    <div class="radio-group">
-      <input type="radio" id="small" name="size" value="small" checked>
-      <label for="small" style="display:inline;color:#4A2E1F;">Small</label>
-      <input type="radio" id="medium" name="size" value="medium">
-      <label for="medium" style="display:inline;color:#4A2E1F;">Medium</label>
-      <input type="radio" id="large" name="size" value="large">
-      <label for="large" style="display:inline;color:#4A2E1F;">Large</label>
-    </div>
+  <div class="form-container">
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <input type="submit" value="Submit Order">
-  </form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="coffee">Select Coffee</label>
+      <select id="coffee" name="coffee" required>
+        <option value="" disabled selected>Choose your coffee</option>
+        <option>Espresso</option>
+        <option>Cappuccino</option>
+        <option>Latte</option>
+        <option>Mocha</option>
+        <option>Caramel Cloud Latte</option>
+        <option>Vanilla Bean Latte</option>
+        <option>Hazelnut Mocha</option>
+      </select>
+
+      <label>Size</label>
+      <div class="radio-group">
+        <input type="radio" id="small" name="size" value="Small" required>
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="size" value="Medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="size" value="Large">
+        <label for="large">Large</label>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent page reload
+      alert("🎉 Thank you! Your order has been successfully placed. ☕"); 
+      form.reset(); // reset form fields
+    });
+  </script>
+
 </body>
 </html>
