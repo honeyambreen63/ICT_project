@@ -3,90 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Page</title>
+  <title>Caramel Cloud Coffee</title>
   <style>
+    /* Fonts and Reset */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #FFF8F0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background: linear-gradient(135deg, #FFF8F0, #FDF1E5);
     }
+
+    /* Header */
     header {
-      background-color: #D9A86C; 
-      padding: 20px;
+      background-color: #D9A86C;
+      padding: 40px 20px;
       text-align: center;
-      color: #4A2E1F; 
+      color: #4A2E1F;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    h1 {
+    header h1 {
+      font-size: 3em;
       margin: 0;
-      font-size: 2em;
+      letter-spacing: 2px;
     }
+
+    /* Navigation */
     nav {
       margin: 20px;
       text-align: center;
     }
     nav a {
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       color: #4A2E1F;
       font-weight: bold;
+      font-size: 1.2em;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
-    .menu-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+    nav a:hover {
+      background-color: #4A2E1F;
+      color: #D9A86C;
     }
-    .menu-item {
-      background-color: #FFFFFF;
-      border: 1px solid #D9A86C;
-      padding: 20px;
-      width: 200px;
+
+    /* Section Headers */
+    .section-header {
+      width: 100%;
       text-align: center;
-      border-radius: 10px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      font-size: 1.8em;
+      margin: 40px 0 20px;
+      color: #4A2E1F;
+      font-weight: bold;
+      border-bottom: 3px solid #D9A86C;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Menu Cards Container */
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 20px 50px;
+    }
+
+    /* Menu Item Card */
+    .menu-item {
+      background: #FFFFFF;
+      border-radius: 15px;
+      padding: 25px 15px;
+      text-align: center;
+      color: #4A2E1F;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+    .menu-item:hover {
+      transform: translateY(-10px) rotate(-1deg);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      background: #FFF4E1;
     }
     .menu-item h3 {
-      color: #4A2E1F;
-      margin-bottom: 10px;
+      font-size: 1.5em;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
     }
     .menu-item p {
+      font-size: 1em;
+      line-height: 1.4;
       color: #4A2E1F;
-      margin: 5px 0;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Our Coffee Menu</h1>
+    <h1>Caramel Cloud Coffee</h1>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="menu.html">Menu</a>
     <a href="table.html">Price List</a>
     <a href="form.html">Order Form</a>
   </nav>
 
+  <!-- Coffee Classics Section -->
+  <div class="section-header">Coffee Classics</div>
   <div class="menu-container">
     <div class="menu-item">
       <h3>Espresso</h3>
-      <p>Small: PKR 250</p>
-      <p>Medium: PKR 300</p>
-      <p>Large: PKR 350</p>
+      <p>Rich and bold classic espresso</p>
     </div>
     <div class="menu-item">
       <h3>Cappuccino</h3>
-      <p>Small: PKR 300</p>
-      <p>Medium: PKR 350</p>
-      <p>Large: PKR 400</p>
+      <p>Espresso with steamed milk foam</p>
     </div>
     <div class="menu-item">
       <h3>Latte</h3>
-      <p>Small: PKR 350</p>
-      <p>Medium: PKR 400</p>
-      <p>Large: PKR 450</p>
+      <p>Smooth coffee with milk and foam</p>
+    </div>
+    <div class="menu-item">
+      <h3>Mocha</h3>
+      <p>Chocolate flavored coffee</p>
+    </div>
+    <div class="menu-item">
+      <h3>Macchiato</h3>
+      <p>Espresso topped with froth</p>
+    </div>
+    <div class="menu-item">
+      <h3>Americano</h3>
+      <p>Espresso diluted with hot water</p>
     </div>
   </div>
+
+  <!-- Specialty Coffees Section -->
+  <div class="section-header">Specialty Coffees</div>
+  <div class="menu-container">
+    <div class="menu-item">
+      <h3>Caramel Cloud Latte</h3>
+      <p>Signature latte with caramel drizzle</p>
+    </div>
+    <div class="menu-item">
+      <h3>Vanilla Bean Latte</h3>
+      <p>Smooth latte with vanilla flavor</p>
+    </div>
+    <div class="menu-item">
+      <h3>Hazelnut Mocha</h3>
+      <p>Chocolate coffee with hazelnut syrup</p>
+    </div>
+    <div class="menu-item">
+      <h3>Irish Coffee</h3>
+      <p>Classic coffee with a touch of cream</p>
+    </div>
+  </div>
+
+  <!-- Snacks & Desserts Section -->
+  <div class="section-header">Snacks & Desserts</div>
+  <div class="menu-container">
+    <div class="menu-item">
+      <h3>Croissant</h3>
+      <p>Buttery flaky pastry</p>
+    </div>
+    <div class="menu-item">
+      <h3>Muffin</h3>
+      <p>Chocolate or blueberry muffin</p>
+    </div>
+    <div class="menu-item">
+      <h3>Bagel</h3>
+      <p>Served with cream cheese</p>
+    </div>
+    <div class="menu-item">
+      <h3>Cheesecake</h3>
+      <p>Classic creamy cheesecake slice</p>
+    </div>
+    <div class="menu-item">
+      <h3>Chocolate Brownie</h3>
+      <p>Rich fudgy chocolate brownie</p>
+    </div>
+    <div class="menu-item">
+      <h3>Tiramisu</h3>
+      <p>Italian coffee-flavored dessert</p>
+    </div>
+  </div>
+
+  <!-- Beverages Section -->
+  <div class="section-header">Beverages</div>
+  <div class="menu-container">
+    <div class="menu-item">
+      <h3>Hot Chocolate</h3>
+      <p>Rich and creamy hot chocolate</p>
+    </div>
+    <div class="menu-item">
+      <h3>Herbal Tea</h3>
+      <p>Relaxing green or chamomile tea</p>
+    </div>
+    <div class="menu-item">
+      <h3>Iced Coffee</h3>
+      <p>Chilled refreshing coffee</p>
+    </div>
+    <div class="menu-item">
+      <h3>Fruit Smoothie</h3>
+      <p>Fresh blended seasonal fruits</p>
+    </div>
+  </div>
+
 </body>
 </html>
+
+    
