@@ -1,0 +1,136 @@
+/* ===== GENERAL STYLING ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #EFE5DA; /* Soft Beige for About, Services, Contact */
+  color: #4A2E1F; /* Dark coffee brown text */
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: #C9A28F; /* Latte Brown */
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4A2E1F;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #D9A86C; /* Highlight on hover */
+}
+
+/* ===== SECTION BOX ===== */
+.section-box {
+  background: #FFFFFF;
+  border: 2px solid #D9A86C; /* Caramel border */
+  border-radius: 10px;
+  padding: 30px 25px;
+  max-width: 900px;
+  margin: 25px auto;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0,0,0,0.15);
+}
+
+.section-box h2 {
+  color: #4A2E1F;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* ===== SERVICES LIST ===== */
+.section-box ul {
+  list-style: square;
+  padding-left: 25px;
+}
+
+.section-box li {
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+/* ===== CONTACT FORM ===== */
+form label {
+  display: block;
+  color: #4A2E1F;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  background: #EFE5DA;
+  width: 95%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #C9A28F;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  background: #D9A86C; /* Submit Button color */
+  color: #4A2E1F;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #C28C50; /* Slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+/* ===== IFRAME (MAP) ===== */
+iframe {
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* ===== HEADINGS & PARAGRAPHS ===== */
+h3 {
+  color: #4A2E1F;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+  }
+
+  .section-box {
+    padding: 20px;
+    margin: 15px;
+  }
+}
