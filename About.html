@@ -1,8 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About Us</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Popup Box Styling */
+    .popup {
+      width: 300px;
+      background: #D9A86C;
+      color: #4A2E1F;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      display: none;
+      z-index: 999;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .popup button {
+      margin-top: 15px;
+      padding: 8px 20px;
+      border: none;
+      background: #4A2E1F;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background: #3b2318;
+    }
+
+    .contact-box {
+      width: 400px;
+      margin: 40px auto;
+      background: #FFF;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #D9A86C;
+      background: #EFE5DA;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #D9A86C;
+      border: none;
+      color: #4A2E1F;
+      border-radius: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c8a85f;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -14,29 +86,44 @@
   <a href="Contact.html">Contact</a>
 </nav>
 
-<div class="section-box">
-  <h2>About Us</h2>
-  <p>
-    Welcome to <b> Caramel Cloud Coffee</b> – where every cup is brewed with love. 
-    We use the best quality beans and fresh ingredients to give you an unforgettable experience.
-  </p>
-  <p>
-    Our mission is to provide a cozy environment for coffee lovers and create 
-    memorable experiences with every visit.
-  </p>
-  <p>
-    <b>Why Choose Us?</b><br>
-    - High-quality, ethically sourced coffee beans<br>
-    - Friendly and skilled baristas<br>
-    - Comfortable ambiance<br>
-    - Focus on sustainability and eco-friendly practices
-  </p>
-  <p>
-    We believe that coffee is not just a drink, but a way to connect with people,
-    enjoy small moments, and start your day with happiness. Whether you're here 
-    to work, meet friends, or relax, Moonlight Coffee is your perfect spot.
-  </p>
+<div class="contact-box">
+  <h2>Contact Us</h2>
+
+  <form id="contactForm">
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email" required>
+
+    <label>Message</label>
+    <textarea rows="4" placeholder="Write your message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
 </div>
+
+<!-- Popup Box -->
+<div class="popup" id="popupBox">
+  Your message has been sent!
+  <br>
+  <button onclick="closePopup()">OK</button>
+</div>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const popup = document.getElementById("popupBox");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // stop form from refreshing
+    popup.style.display = "block"; // show popup
+    form.reset(); // clear form fields
+  });
+
+  function closePopup() {
+    popup.style.display = "none"; // hide popup
+  }
+</script>
 
 </body>
 </html>
